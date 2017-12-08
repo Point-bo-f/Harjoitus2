@@ -12,12 +12,11 @@ namespace Harjoitus2
         static void Main(string[] args)
         {
             string tiedosto = @"C:\Temp\Lämpötila.txt";
-            string uusiTieto = @"C:\Temp\UusiLämpötila2.txt";
 
             if (File.Exists(tiedosto))
             {
                 string aiempiArvo = File.ReadAllText(tiedosto);
-                Console.WriteLine("aiempi lämpötila oli" + aiempiArvo + " astetta");
+                Console.WriteLine("aiempi lämpötila oli " + aiempiArvo + " astetta");
             }
             else
             {
@@ -31,7 +30,6 @@ namespace Harjoitus2
             // Tiedostoon kirjoittaminen
 
             File.WriteAllText(tiedosto, lämpotila.ToString());
-            File.Copy(tiedosto, uusiTieto);
             Console.WriteLine("Uusi lämpötila tallennettu.");
 
             Console.ReadLine();
